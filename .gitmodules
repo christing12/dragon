@@ -10,3 +10,7 @@
 	path = external/vma
 	url = git@github.com:GPUOpen-LibrariesAndSDKs/VulkanMemoryAllocator.git
 	sparse-checkout = bin include src tools
+[submodule "external/glm"]
+	path = external/glm
+	url = git@github.com:g-truc/glm.git
+	sparse-checkout = cmake doc glm util
