@@ -11,7 +11,11 @@ project(${PROJECT_NAME}
     DESCRIPTION "Vulkan Rendering Engine"
     LANGUAGES CXX
 )
+find_package(Vulkan REQUIRED)
+add_subdirectory(external)
 
 add_executable(${PROJECT_NAME})
 target_sources(${PROJECT_NAME} PRIVATE src/main.cpp)
 
+target_link_libraries(${PROJECT_NAME} PRIVATE volk::volk vk-bootstrap::vk-bootstrap)
+target_include_directories(${PROJECT_NAME} PRIVATE external/volk external/vkbootstrap/src)
