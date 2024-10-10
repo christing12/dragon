@@ -2,3 +2,7 @@
 	path = external/volk
 	url = git@github.com:zeux/volk.git
 	sparse-checkout = cmake
+[submodule "external/vkbootstrap"]
+	path = external/vkbootstrap
+	url = git@github.com:charles-lunarg/vk-bootstrap.git
+	sparse-checkout = ext gen script src
