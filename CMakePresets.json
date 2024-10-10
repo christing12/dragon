@@ -1,0 +1,33 @@
+{
+    "version": 3,
+    "configurePresets": [
+        {
+            "name": "vs2022x64",
+            "displayName": "Windows Visual Studio 2022 x64",
+            "description": "Sets the Visual Studio Solution generator",
+            "generator": "Visual Studio 17 2022",
+            "architecture": "x64",
+            "binaryDir": "${sourceDir}/workspace/${presetName}",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug",
+                "CMAKE_INSTALL_PREFIX": "${sourceDir}/workspace/install/${presetName}"
+            }
+        },
+        {
+          "name": "ninja",
+          "displayName": "Windows x64 Debug Ninja",
+          "description": "Sets Ninja generator, compilers, x64 architecture, build and install directory, debug build type",
+          "generator": "Ninja",
+          "binaryDir": "${sourceDir}/workspace/build/${presetName}",
+          "cacheVariables": {
+            "CMAKE_BUILD_TYPE": "Debug",
+            "CMAKE_INSTALL_PREFIX": "${sourceDir}/workspace/install/${presetName}"
+          },
+          "vendor": {
+            "microsoft.com/VisualStudioSettings/CMake/1.0": {
+              "hostOS": [ "Windows" ]
+            }
+          }
+        }
+    ]
+}
